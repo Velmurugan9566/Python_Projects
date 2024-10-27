@@ -1,0 +1,51 @@
+use('velu')
+
+// Find the maximum marks for each subject
+db.samplestu.aggregate([
+    {
+      $project: {
+        marks: {
+          $objectToArray: "$marks"
+        }
+      }
+    },
+    {
+      $unwind: "$marks"
+    },
+    {
+      $group: {
+        _id: "$marks.k",
+        maxMark: { $max: "$marks.v" }
+      }
+    }
+  ]);
+  db.samplestu.aggregate([
+    {
+      $group: {
+        _id:"Python",
+        maxPythonMark: { $avg: "$marks.Python" }
+      }
+    }
+  ]);
+  db.samplestu.aggregate([
+    {
+      $project: {
+        totalMarks: {
+          $sum: {
+            $map: {
+              input: { $objectToArray: "$marks" },
+              as: "subject",
+              in: "$$subject.v"
+            }
+          }
+        }
+      }
+    },
+    {
+        $sort: { totalMarks: -1 }
+      },
+      {
+        $limit: 1
+      }
+  ]);
+  

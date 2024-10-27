@@ -1,0 +1,28 @@
+use('velu')
+db.createCollection('exam')
+db.exam.insertMany([
+    {
+        stuid:101,
+        semester:1,
+        softcom:{
+            doe:24.09.23,
+            sem:68,
+            int:28
+        },
+        Discreatemaths:{
+            doe:Date(25.09.23),
+            sem:70,
+            int:30,
+        },
+        linux:{
+            doe:Date(27.09.23),
+            sem:70,
+            int:28,
+        },
+        python:{
+            doe:Date(28.09.23),
+            sem:70,
+            int:28,
+        }
+    }
+])

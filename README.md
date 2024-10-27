@@ -1,4 +1,4 @@
-# Python Knowledge Repository
+# Python Repository
 
 This repository contains a collection of Python programs and scripts that I created to store and showcase my Python knowledge across different areas of programming. It includes examples of data visualization, database connectivity, Excel file handling, and simple logical programming.
 

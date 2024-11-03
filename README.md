@@ -30,4 +30,20 @@ This repository contains a collection of Python programs and scripts that I crea
 
 [AR Testing](https://colab.research.google.com/drive/1wy2USwphgMm1H964yCNKTM6Sqc1Avk2T?usp=sharing)
 
+## Currency converter App
 
+**File**
+[Code](currencyAPI.py)
+![Output page](ScreenShots/CurrencyConverter.PNG)
+
+## Crud Operation using MySql
+
+[Code](sqlconnect.py)
+
+![Output page](ScreenShots/crud.PNG)
+
+## File Read write
+
+[Code](filewriting.py)
+
+![Output](ScreenShots/fileread.PNG)
